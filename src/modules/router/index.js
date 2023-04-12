@@ -100,6 +100,8 @@ export default {
             name: 'users',
             component: () => import('@/modules/views/Users/UsersView'),
         },
+        // Paola Modulos
+        
     ]
 
 }
