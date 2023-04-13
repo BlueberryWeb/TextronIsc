@@ -100,8 +100,36 @@ export default {
             name: 'users',
             component: () => import('@/modules/views/Users/UsersView'),
         },
-        // Paola Modulos
-        
+        // About Company
+        {
+            path: '/about',
+            name: 'About',
+            component: () => import('@/modules/views/Company/AboutCompany')
+        },
+        // Vision Company
+        {
+            path: '/vision',
+            name: 'Vision',
+            component: () => import('@/modules/views/Company/VisionCompany')
+        },
+        // Mission Company
+        {
+            path: '/mission',
+            name: 'Mission',
+            component: () => import('@/modules/views/Company/MissionCompany')
+        },
+        //Values Company
+        {
+            path: '/values',
+            name: 'Values',
+            component: () => import('@/modules/views/Company/ValuesCompany')
+        },
+        //ISC OS 
+        {
+            path: '/OS',
+            name: 'ISC_OS',
+            component: () => import('@/modules/views/Os/IscOs')
+        },
     ]
 
 }
