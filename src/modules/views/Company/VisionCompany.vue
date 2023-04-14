@@ -1,6 +1,6 @@
 <template>
     <section class="showcase-vision" id="showcase">
-        <video v-bind:src="requiere('../../../assets/video/loop-vision.mp4')" muted loop autoplay ></video>    
+        <video v-bind:src="require('../../../assets/video/loop-vision.mp4')" muted loop autoplay ></video>    
         <div class="edit">
             <i class="fa-regular fa-pen-to-square"></i>
         </div>  
@@ -50,10 +50,10 @@
                 <div class="row">
                     <hr/>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="d-flex">
+                        <div class="d-flex cursor" @click="getAbout">
                             <div class="me-4">
                                 <div class="circle">
-                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <img v-bind:src="require('../../../assets/images/left-arrow.png')" alt="" class="img-fluid "/>
                                 </div>
                             </div>
                             <div class="mt-1">
@@ -64,13 +64,13 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6"></div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="d-flex">
+                        <div class="d-flex cursor" @click="getMission">
                             <div class="mt-1">
-                                <h5 class="oLight h6">Back to <b class="oExtraBold">Our Company</b> </h5>
+                                <h5 class="oLight h6">Go to <b class="oExtraBold">Mission</b> </h5>
                             </div>
                             <div class="ms-4">
                                 <div class="circle">
-                                    <i class="fa-solid fa-chevron-right"></i>
+                                    <img v-bind:src="require('../../../assets/images/right-arrow.png')" alt="" class="img-fluid "/>
                                 </div>
                             </div>
                                 
@@ -85,11 +85,31 @@
 
 <script>
 export default {
-
+    methods:{
+        getMission() {
+            this.$router.push({ name: "Mission" });
+        },
+        getAbout(){
+            this.$router.push({ name: "About_Company" });
+        },
+    }
 }
 </script>
 
 <style scoped>
+    .cursor{
+        cursor: pointer;
+    }
+    .edit{
+        position: absolute;
+        top: 2%;
+        right: 3%;
+        transform: calc(-50%, -50%);
+        text-align: start;
+    }
+    .edit i{
+        font-size: 1.3rem;
+    }
     .showcase-vision{
         position: relative;
         right: 0;
@@ -144,5 +164,16 @@ export default {
         transform: calc(-50%, -50%);
         bottom: 3%;
         left: 0;
+    }
+    .circle{
+        border-radius: 50%;
+        border: 1px solid #FFFFFF;
+        width: 30px;
+        text-align: center;
+        height: 30px;
+        align-items: center;
+    }
+    .circle img{
+        width: 30%;
     }
 </style>

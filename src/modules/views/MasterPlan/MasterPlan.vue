@@ -41,7 +41,7 @@
       <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-2"></div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-8">
-          <div class="mx-4">
+          <div class="mx-5">
             <div class="bg-matrix py-5">
               <div class="txt-matrix">
                 <div class="container py-5">
@@ -445,124 +445,124 @@ export default {
 </script>
 
 <style scoped>
-.padre-flex {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
+  .padre-flex {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 
-.card-results {
-  background-color: black;
-  color: white;
-  border: solid rgb(59, 59, 59) 2px;
-  height: 130px;
-  border-radius: 20px;
-}
+  .card-results {
+    background-color: black;
+    color: white;
+    border: solid rgb(59, 59, 59) 2px;
+    height: 130px;
+    border-radius: 20px;
+  }
 
-.margin-top {
-  margin-top: 30px;
-}
+  .margin-top {
+    margin-top: 30px;
+  }
 
-.bold {
-  font-weight: 600;
-}
+  .bold {
+    font-weight: 600;
+  }
 
-.pointer {
-  cursor: pointer;
-}
+  .pointer {
+    cursor: pointer;
+  }
 
-.video {
-  height: 100vh;
-  width: 630px;
-}
+  .video {
+    height: 100vh;
+    width: 630px;
+  }
 
-.showcase-matrix {
-  position: relative;
-  right: 0;
-  width: 100%;
-  min-height: 140vh;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  color: #fff;
-  z-index: 2;
-}
-.showcase-matrix video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-}
-.bg-matrix {
-  background-image: url("../../../assets/images/bg-matrix.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.box-matrix {
-  position: absolute;
-  top: 55%;
-  left: 4%;
-  transform: calc(-50%, -50%);
-  z-index: 200;
-}
-.brand {
-  border: 0.5px solid #fff;
-  border-radius: 10px;
-  height: 55px;
-  cursor: pointer;
-}
-.logo-1-mat {
-  width: 80px;
-}
-.logo-2-mat {
-  width: 70px;
-}
-.logo-3-mat {
-  width: 60px;
-}
-.logo-4-mat {
-  width: 80px;
-}
-.logo-5-mat {
-  width: 90px;
-}
-.logo-6-mat {
-  width: 100px;
-}
-.content-matrix {
-  margin-top: 0.8rem;
-}
-.content-matrix h1 {
-  font-size: 14px;
-}
-.txt-large {
-  font-size: 12px !important;
-  margin-top: 0.3rem;
-}
-.txt-matrix {
-  position: relative;
-}
-.title-matrix {
-  position: absolute;
-  top: -3.5%;
-  left: 14%;
-}
-/* ENDS TRAINING VIEW */
-@media only screen and (min-width: 1600px) and (max-width: 2000px) {
+  .showcase-matrix {
+    position: relative;
+    right: 0;
+    width: 100%;
+    min-height: 140vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
+  }
+  .showcase-matrix video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  .bg-matrix {
+    background-image: url("../../../assets/images/bg-matrix.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .box-matrix {
     position: absolute;
-    top: 52%;
-    left: 15%;
+    top: 20%;
+    left: 6%;
     transform: calc(-50%, -50%);
     z-index: 200;
   }
-}
+  .brand {
+    border: 0.5px solid #fff;
+    border-radius: 10px;
+    height: 55px;
+    cursor: pointer;
+  }
+  .logo-1-mat {
+    width: 80px;
+  }
+  .logo-2-mat {
+    width: 70px;
+  }
+  .logo-3-mat {
+    width: 60px;
+  }
+  .logo-4-mat {
+    width: 80px;
+  }
+  .logo-5-mat {
+    width: 90px;
+  }
+  .logo-6-mat {
+    width: 100px;
+  }
+  .content-matrix {
+    margin-top: 0.8rem;
+  }
+  .content-matrix h1 {
+    font-size: 14px;
+  }
+  .txt-large {
+    font-size: 12px !important;
+    margin-top: 0.3rem;
+  }
+  .txt-matrix {
+    position: relative;
+  }
+  .title-matrix {
+    position: absolute;
+    top: -3.5%;
+    left: 14%;
+  }
+  /* ENDS TRAINING VIEW */
+  @media only screen and (min-width: 1600px) and (max-width: 2000px) {
+    .box-matrix {
+      position: absolute;
+      top: 52%;
+      left: 15%;
+      transform: calc(-50%, -50%);
+      z-index: 200;
+    }
+  }
 </style>

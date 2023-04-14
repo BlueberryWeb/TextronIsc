@@ -74,8 +74,14 @@
       <li @click="getToLeasonsLearned" class="menu-login">
         <a>Knowledge Database</a>
       </li>
-      <li @click="getToSharePoints" class="border- menu-login">
+      <li @click="getToSharePoints" class="menu-login">
         <a>Sharepoints</a>
+      </li>
+      <li @click="getCompany"  class=" menu-login">
+        <a>Company</a>
+      </li>
+      <li @click="getOS"  class="border- menu-login">
+        <a>OS</a>
       </li>
       <li class="menu-login">
         <a>My Account</a>
@@ -236,7 +242,16 @@ export default {
       this.sidemenu = document.getElementById("openSidebarMenu");
       this.sidemenu.checked = false;
     },
-
+    getCompany() {
+      this.$router.push({ name: "About_Company" });
+      this.sidemenu = document.getElementById("openSidebarMenu");
+      this.sidemenu.checked = false;
+    },
+    getOS() {
+      this.$router.push({ name: "ISC_OS" });
+      this.sidemenu = document.getElementById("openSidebarMenu");
+      this.sidemenu.checked = false;
+    },
     logout() {
       firebase
         .auth()

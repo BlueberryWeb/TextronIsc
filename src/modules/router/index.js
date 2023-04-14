@@ -102,8 +102,8 @@ export default {
         },
         // About Company
         {
-            path: '/about',
-            name: 'About',
+            path: '/aboutCompany',
+            name: 'About_Company',
             component: () => import('@/modules/views/Company/AboutCompany')
         },
         // Vision Company

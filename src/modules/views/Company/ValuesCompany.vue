@@ -5,11 +5,11 @@
             <i class="fa-regular fa-pen-to-square"></i>
         </div>  
         <div class="values">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                         <div class="row">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-4 values-additional">
                                 <div class="txt-values" data-aos="fade-down"  data-aos-duration="1500">
                                     <h1 class="oLight space-words">MAIN <br/> VALUES</h1>
                                     <div class="oLight txt-main">
@@ -30,7 +30,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-2"></div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-2 values-additional-2"></div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                 <div class="txt-principles" data-aos="fade-down"  data-aos-duration="1500" >
                                     <h1 class="oLight space-words">PRINCIPLES</h1>
@@ -77,8 +77,8 @@
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-4">
-                                            <div class="text-center">
-                                                <img v-bind:src="require('../../../assets/images/strategic-enablers.png')" alt="" class="img-fluid txt-strategic-img"/>
+                                            <div class="text-center txt-strategic-img">
+                                                <img v-bind:src="require('../../../assets/images/strategic-enablers.png')" alt="" class="img-fluid "/>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-4">
@@ -110,10 +110,10 @@
                 <div class="row">
                     <hr/>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="d-flex">
+                        <div class="d-flex cursor" @click="getAbout">
                             <div class="me-4">
                                 <div class="circle">
-                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <img v-bind:src="require('../../../assets/images/left-arrow.png')" alt="" class="img-fluid "/>
                                 </div>
                             </div>
                             <div class="mt-1">
@@ -124,15 +124,16 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6"></div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="d-flex">
+                        <div class="d-flex cursor" @click="getMission">
+                            <div class="me-4">
+                                <div class="circle">
+                                    <img v-bind:src="require('../../../assets/images/left-arrow.png')" alt="" class="img-fluid "/>
+                                </div>
+                            </div>
                             <div class="mt-1">
                                 <h5 class="oLight h6">Back to <b class="oExtraBold">Mission</b> </h5>
                             </div>
-                            <div class="ms-4">
-                                <div class="circle">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </div>
-                            </div>
+                            
                         </div>    
                     </div>
                 </div>
@@ -143,11 +144,42 @@
 
 <script>
 export default {
-
+    methods:{
+        getMission() {
+            this.$router.push({ name: "Mission" });
+        },
+        getAbout(){
+            this.$router.push({ name: "About_Company" });
+        },
+    }
 }
 </script>
 
 <style scoped>
+    .circle{
+        border-radius: 50%;
+        border: 1px solid #FFFFFF;
+        width: 30px;
+        text-align: center;
+        height: 30px;
+        align-items: center;
+    }
+    .circle img{
+        width: 30%;
+    }
+    .cursor{
+        cursor: pointer;
+    }
+    .edit{
+        position: absolute;
+        top: 2%;
+        right: 3%;
+        transform: calc(-50%, -50%);
+        text-align: start;
+    }
+    .edit i{
+        font-size: 1.3rem;
+    }
     .showcase-values{
         position: relative;
         right: 0;
@@ -180,7 +212,6 @@ export default {
     }
     .txt-values{
         margin-top: 5rem;
-        left: 6%;
         text-align: end;
     }
     .txt-values p{
@@ -228,9 +259,9 @@ export default {
     }
     .txt-strategic-img{
         position: absolute;
-        width: 21%;
-        right: 20.3%;
-        top: 30%;
+        width: 100%;
+        right: 16.5%;
+        top: 20%;
         z-index: 1;
     }
     .txt-strategic h1{
@@ -248,4 +279,34 @@ export default {
     .txt-pi{
         margin-top: 15rem;
     }
+    .hr-bottom{
+        position: absolute;
+        width: 100%;
+        transform: calc(-50%, -50%);
+        bottom: 3%;
+        left: 0;
+    }
+    .hr-title{
+        border: 0.5px solid #FFFFFF;
+        opacity: 0.5;
+    }
+    @media only screen and (min-width: 19000px) and (max-width: 2500px){
+        .showcase-values video{
+            object-fit: cover;
+        }
+        .values-additional-2{
+            display: none;
+        }
+        .values-additional{
+            margin-left: 5rem;
+        }
+        .txt-principles{
+            margin-left: 10rem;
+            margin-top: 13rem;
+        }
+        .txt-additional{
+            margin-top: 10rem;
+        }
+    }
+
 </style>

@@ -58,7 +58,7 @@
                                             <button class="nav-link" id="pills-safety2-tab" data-bs-toggle="pill" data-bs-target="#pills-safety2" type="button" role="tab" aria-controls="pills-safety2" aria-selected="false">SAFETY</button>
                                         </li>
                                         <li class="nav-item col-12 col-sm-12 col-md-12 col-lg-4" role="presentation">
-                                            <button class="nav-link active" id="pills-people2-tab" data-bs-toggle="pill" data-bs-target="#pills-people2" type="button" role="tab" aria-controls="pills-people2" aria-selected="true">PEOPLE</button>
+                                            <button class="nav-link" id="pills-people2-tab" data-bs-toggle="pill" data-bs-target="#pills-people2" type="button" role="tab" aria-controls="pills-people2" aria-selected="true">PEOPLE</button>
                                         </li>  
                                         <li class="nav-item col-12 col-sm-12 col-md-12 col-lg-4" role="presentation">
                                             <button class="nav-link" id="pills-quality2-tab" data-bs-toggle="pill" data-bs-target="#pills-quality2" type="button" role="tab" aria-controls="pills-quality2" aria-selected="false">QUALITY</button>
@@ -80,7 +80,7 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                         <div class="text-center">
-                                            <img src="img/icon-download-file.png" alt="" class="img-fluid icon-file"/>
+                                            <img v-bind:src="require('../../../assets/images/icon-download-file.png')" alt="" class="img-fluid icon-file"/>
                                         </div>
                                     </div>
                                         
@@ -116,7 +116,7 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                         <div class="text-center">
-                                            <img src="img/icon-download-file.png" alt="" class="img-fluid icon-file"/>
+                                            <img v-bind:src="require('../../../assets/images/icon-download-file.png')" alt="" class="img-fluid icon-file"/>
                                         </div>
                                     </div>
                                         
@@ -152,7 +152,7 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                         <div class="text-center">
-                                            <img src="img/icon-download-file.png" alt="" class="img-fluid icon-file"/>
+                                            <img v-bind:src="require('../../../assets/images/icon-download-file.png')" alt="" class="img-fluid icon-file"/>
                                         </div>
                                     </div>
                                         
@@ -188,7 +188,7 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                         <div class="text-center">
-                                            <img src="img/icon-download-file.png" alt="" class="img-fluid icon-file"/>
+                                            <img v-bind:src="require('../../../assets/images/icon-download-file.png')" alt="" class="img-fluid icon-file"/>
                                         </div>
                                     </div>
                                         
@@ -224,7 +224,7 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                         <div class="text-center">
-                                            <img src="img/icon-download-file.png" alt="" class="img-fluid icon-file"/>
+                                            <img v-bind:src="require('../../../assets/images/icon-download-file.png')" alt="" class="img-fluid icon-file"/>
                                         </div>
                                     </div>
                                         
@@ -260,7 +260,7 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                         <div class="text-center">
-                                            <img src="img/icon-download-file.png" alt="" class="img-fluid icon-file"/>
+                                            <img v-bind:src="require('../../../assets/images/icon-download-file.png')" alt="" class="img-fluid icon-file"/>
                                         </div>
                                     </div>
                                         
@@ -296,7 +296,7 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                         <div class="text-center">
-                                            <img src="img/icon-download-file.png" alt="" class="img-fluid icon-file"/>
+                                            <img v-bind:src="require('../../../assets/images/icon-download-file.png')" alt="" class="img-fluid icon-file"/>
                                         </div>
                                     </div>
                                         
@@ -332,7 +332,7 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                         <div class="text-center">
-                                            <img src="img/icon-download-file.png" alt="" class="img-fluid icon-file"/>
+                                            <img v-bind:src="require('../../../assets/images/icon-download-file.png')" alt="" class="img-fluid icon-file"/>
                                         </div>
                                     </div>
                                         
@@ -368,7 +368,7 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                         <div class="text-center">
-                                            <img src="img/icon-download-file.png" alt="" class="img-fluid icon-file"/>
+                                            <img v-bind:src="require('../../../assets/images/icon-download-file.png')" alt="" class="img-fluid icon-file"/>
                                         </div>
                                     </div>
                                         
@@ -409,6 +409,16 @@ export default {
 </script>
 
 <style scoped>
+    .edit{
+        position: absolute;
+        top: 2%;
+        right: 3%;
+        transform: calc(-50%, -50%);
+        text-align: start;
+    }
+    .edit i{
+        font-size: 1.3rem;
+    }
     .showcase-isc{
         position: relative;
         right: 0;
@@ -511,4 +521,20 @@ export default {
     .txt-info-modules img{
         width: 90%;
     }
+    @media only screen and (min-width: 19000px) and (max-width: 2500px){        
+        .logo-isc{
+            margin-top: 18.5rem;
+            text-align: end;
+        }
+        .buttons-modules{
+            height: 500px;
+        }
+        .info-modules{
+            margin-top: 8;
+        }
+        .txt-info-modules{
+            height: 450px;
+        }
+    }
+    
 </style>

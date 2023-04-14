@@ -4,7 +4,7 @@
         <div class="edit">
             <i class="fa-regular fa-pen-to-square"></i>
         </div>  
-        <div class="txt-vision" data-aos="fade-down"  data-aos-duration="1500">
+        <div class="txt-mission" data-aos="fade-down"  data-aos-duration="1500">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3">
@@ -52,10 +52,10 @@
                 <div class="row">
                     <hr/>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="d-flex">
+                        <div class="d-flex" @click="getAbout">
                             <div class="me-4">
                                 <div class="circle">
-                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <img v-bind:src="require('../../../assets/images/left-arrow.png')" alt="" class="img-fluid "/>
                                 </div>
                             </div>
                             <div class="mt-1">
@@ -66,10 +66,10 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-5"></div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-2">
-                        <div class="d-flex">
+                        <div class="d-flex cursor" @click="getVision">
                             <div class="me-4">
                                 <div class="circle">
-                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <img v-bind:src="require('../../../assets/images/left-arrow.png')" alt="" class="img-fluid "/>
                                 </div>
                             </div>
                             <div class="mt-1">
@@ -79,13 +79,13 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-2">
-                        <div class="d-flex">
+                        <div class="d-flex cursor" @click="getValues">
                             <div class="mt-1">
                                 <h5 class="oLight h6">Go to <b class="oExtraBold">Values</b> </h5>
                             </div>
                             <div class="ms-4">
                                 <div class="circle">
-                                    <i class="fa-solid fa-chevron-right"></i>
+                                    <img v-bind:src="require('../../../assets/images/right-arrow.png')" alt="" class="img-fluid "/>
                                 </div>
                             </div>
                                 
@@ -100,11 +100,34 @@
 
 <script>
 export default {
-
+    methods:{
+        getVision() {
+            this.$router.push({ name: "Vision" });
+        },
+        getMission() {
+            this.$router.push({ name: "Mission" });
+        },
+        getValues() {
+            this.$router.push({ name: "Values" });
+        },
+        getAbout(){
+            this.$router.push({ name: "About_Company" });
+        },
+    }
 }
 </script>
 
 <style scoped>
+    .edit{
+        position: absolute;
+        top: 2%;
+        right: 3%;
+        transform: calc(-50%, -50%);
+        text-align: start;
+    }
+    .edit i{
+        font-size: 1.3rem;
+    }
     .showcase-mission{
         position: relative;
         right: 0;
@@ -129,10 +152,11 @@ export default {
     }
     .txt-mission{
         position: absolute;
-        top: 38%;
-        left: 33%;
+        top: 15%;
+        left: 0;
+        width: 100%;
         transform: calc(-50%, -50%);
-        text-align: center;
+        text-align: start;
     }
     .hr-vertical{
         rotate: 90deg;
@@ -151,5 +175,19 @@ export default {
     .hr-title{
         border: 0.5px solid #FFFFFF;
         opacity: 0.5;
+    }
+    .cursor{
+        cursor: pointer;
+    }
+    .circle{
+        border-radius: 50%;
+        border: 1px solid #FFFFFF;
+        width: 30px;
+        text-align: center;
+        height: 30px;
+        align-items: center;
+    }
+    .circle img{
+        width: 30%;
     }
 </style>

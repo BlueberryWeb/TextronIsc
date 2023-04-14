@@ -1,6 +1,6 @@
 <template>
     <section class="showcase-about" id="showcase">
-        <video v-bind:src="requiere('../../../assets/video/loop-about.mp4')" muted loop autoplay ></video>  
+        <video v-bind:src="require('../../../assets/video/loop-about.mp4')" muted loop autoplay ></video>  
         <div class="edit">
             <i class="fa-regular fa-pen-to-square"></i>
         </div>  
@@ -10,7 +10,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                         <div class="">
                             <h6 class="oLight">About our company</h6>
-                            <img v-bind:src="('../../../assets/images/logo-textronx.png')" alt="Logo Textron" class="img-fluid logo-about mb-5"/>
+                            <img v-bind:src="require('../../../assets/images/logo-textronx.png')" alt="Logo Textron" class="img-fluid logo-about mb-5"/>
                             <h1 class="oExtraBold display-6">
                                 We believe in excellence <br/>
                                 <b class="oLight">through organization and <br/> innovation</b>
@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 mt-4">
-                                    <div class="">
+                                    <div class="cursor" @click="getVision">
                                         <h1 class="oExtraBold h2">Our Vision</h1>
                                         <div class="d-flex">
                                             <div class="me-4">
@@ -35,7 +35,7 @@
                                             </div>
                                             <div class="ms-5">
                                                 <div class="circle">
-                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                    <img v-bind:src="require('../../../assets/images/right-arrow.png')" alt="" class="img-fluid "/>
                                                 </div>
                                             </div>
                                         </div>
@@ -47,11 +47,11 @@
                             <div class="row my-3">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-5">
                                     <div class="text-center">
-                                        <img v-bind:src="requiere('../../../assets/images/mission-icon.png')" alt="Icon Vision" class="img-fluid mission-icon"/>
+                                        <img v-bind:src="require('../../../assets/images/mission-icon.png')" alt="Icon Vision" class="img-fluid mission-icon"/>
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-7">
-                                    <div class="">
+                                    <div class="cursor" @click="getMission">
                                         <h1 class="oExtraBold h2">Our Mission</h1>
                                         <div class="d-flex">
                                             <div class="">
@@ -59,7 +59,7 @@
                                             </div>
                                             <div class="ms-4">
                                                 <div class="circle">
-                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                    <img v-bind:src="require('../../../assets/images/right-arrow.png')" alt="" class="img-fluid "/>
                                                 </div>
                                             </div>
                                         </div>
@@ -75,7 +75,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-7">
-                                    <div class="">
+                                    <div class="cursor" @click="getValues">
                                         <h1 class="oExtraBold h2">Our Values</h1>
                                         <div class="d-flex">
                                             <div class="">
@@ -84,7 +84,7 @@
                                             </div>
                                             <div class="ms-4">
                                                 <div class="circle">
-                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                    <img v-bind:src="require('../../../assets/images/right-arrow.png')" alt="" class="img-fluid "/>
                                                 </div>
                                             </div>
                                         </div>
@@ -102,11 +102,24 @@
 
 <script>
 export default {
-
+    methods:{
+        getVision() {
+            this.$router.push({ name: "Vision" });
+        },
+        getMission() {
+            this.$router.push({ name: "Mission" });
+        },
+        getValues() {
+            this.$router.push({ name: "Values" });
+        },
+    }
 }
 </script>
 
 <style scoped>
+    .cursor{
+        cursor: pointer;
+    }
     .showcase-about{
         position: relative;
         right: 0;
@@ -159,8 +172,8 @@ export default {
         text-align: center;
         height: 30px;
     }
-    .circle i{
-        margin-top: 6px;
+    .circle img{
+        width: 30%;
     }
     .edit{
         position: absolute;
