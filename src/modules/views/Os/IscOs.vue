@@ -2,7 +2,9 @@
     <section class="showcase-isc" id="showcase">
         <video v-bind:src="require('../../../assets/video/loop-ISC.mp4')" muted loop autoplay ></video> 
         <div class="edit">
-            <i class="fa-regular fa-pen-to-square"></i>
+            <button class="btn btn-primary btn-edit">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </button>
         </div>     
         <div class="txt-isc" data-aos="fade-down"  data-aos-duration="1500">
             <div class="container">
@@ -34,6 +36,7 @@
                                 <div class="title-modules">
                                     <h3 class="oLight">MODULES</h3>
                                 </div>
+                               
                                 <div class="buttons-modules">
                                     <ul class="nav nav-pills mb-3 flex-column flex-sm-row justify-content-center" id="pills-tab" role="tablist">
                                         <li class="nav-item col-12 col-sm-12 col-md-12 col-lg-4" role="presentation">
@@ -69,6 +72,11 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-5 info-modules">
+                        <div class="btn-add-module">
+                            <button class="btn btn-primary btn-add">
+                                <img v-bind:src="require('../../../assets/images/btn-add.png')" alt="" class="img-fluid"/>
+                            </button>
+                        </div>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-people" role="tabpanel" aria-labelledby="pills-people-tab">
                                 <div class="row mb-4">
@@ -520,6 +528,30 @@ export default {
     }
     .txt-info-modules img{
         width: 90%;
+    }
+    .btn-add{
+        background: transparent;
+        border: none;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .btn-add-module{
+        position: absolute;
+        left: -10%;
+        top: -10%;
+    }
+    .btn-edit{
+        background: transparent;
+        border: none;
+    }
+    .btn-edit:hover{
+        background: transparent;
+        border: none;
+    }
+    .btn-edit:focus{
+        background: transparent;
+        border: none;
     }
     @media only screen and (min-width: 19000px) and (max-width: 2500px){        
         .logo-isc{

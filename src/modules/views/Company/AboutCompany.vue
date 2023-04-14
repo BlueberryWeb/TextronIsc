@@ -2,7 +2,9 @@
     <section class="showcase-about" id="showcase">
         <video v-bind:src="require('../../../assets/video/loop-about.mp4')" muted loop autoplay ></video>  
         <div class="edit">
-            <i class="fa-regular fa-pen-to-square"></i>
+            <button class="btn btn-primary btn-edit">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </button>
         </div>  
         <div class="txt-about" data-aos="fade-down"  data-aos-duration="1500">
             <div class="container">
@@ -184,5 +186,17 @@ export default {
     }
     .edit i{
         font-size: 1.3rem;
+    }
+    .btn-edit{
+        background: transparent;
+        border: none;
+    }
+    .btn-edit:hover{
+        background: transparent;
+        border: none;
+    }
+    .btn-edit:focus{
+        background: transparent;
+        border: none;
     }
 </style>

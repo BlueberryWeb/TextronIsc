@@ -2,7 +2,9 @@
     <section class="showcase-values" id="showcase">
         <video v-bind:src="require('../../../assets/video/loop-values.mp4')" muted loop autoplay ></video>    
         <div class="edit">
-            <i class="fa-regular fa-pen-to-square"></i>
+            <button class="btn btn-primary btn-edit">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </button>
         </div>  
         <div class="values">
             <div class="container-fluid">
@@ -289,6 +291,18 @@ export default {
     .hr-title{
         border: 0.5px solid #FFFFFF;
         opacity: 0.5;
+    }
+    .btn-edit{
+        background: transparent;
+        border: none;
+    }
+    .btn-edit:hover{
+        background: transparent;
+        border: none;
+    }
+    .btn-edit:focus{
+        background: transparent;
+        border: none;
     }
     @media only screen and (min-width: 19000px) and (max-width: 2500px){
         .showcase-values video{
