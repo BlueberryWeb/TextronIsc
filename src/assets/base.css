@@ -531,7 +531,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   font-family: 'Open Sans Extra Bold';
 }
 /* ENDS VIEW LOGIN */
-@media only screen and (min-width: 1600px) and (max-width: 2000px){
+@media only screen and (min-width: 1600px) and (max-width: 4500px){
   .brands{
       position: relative;
       width: 380px;
@@ -558,5 +558,41 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   }
   .pointer{
     cursor: pointer;
+  }
+  .showcase-values video{
+    object-fit: cover;
+  }
+  .values-additional-2{
+      display: none;
+  }
+  .values-additional{
+      margin-left: 5rem;
+  }
+  .txt-principles{
+      margin-left: 10rem;
+      margin-top: 13rem;
+  }
+  .txt-additional{
+      margin-top: 10rem;
+  }
+  .txt-strategic{
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+  .logo-isc{
+    margin-top: 18.5rem;
+    text-align: end;
+  }
+  .buttons-modules{
+      height: 500px;
+  }
+  .info-modules{
+      margin-top: -3rem !important;
+  }
+  .txt-info-modules{
+      height: 450px;
+  }
+  .txt-isc{
+    top: 3%;
   }
 }

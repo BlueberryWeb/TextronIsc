@@ -452,7 +452,7 @@ export default {
     }
     .txt-isc{
         position: absolute;
-        top: 10%;
+        top: 3%;
         left: 0;
         transform: calc(-50%, -50%);
         width: 100%;
@@ -553,20 +553,5 @@ export default {
         background: transparent;
         border: none;
     }
-    @media only screen and (min-width: 19000px) and (max-width: 2500px){        
-        .logo-isc{
-            margin-top: 18.5rem;
-            text-align: end;
-        }
-        .buttons-modules{
-            height: 500px;
-        }
-        .info-modules{
-            margin-top: 8;
-        }
-        .txt-info-modules{
-            height: 450px;
-        }
-    }
-    
+
 </style>

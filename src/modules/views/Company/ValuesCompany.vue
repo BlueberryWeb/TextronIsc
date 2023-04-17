@@ -60,46 +60,41 @@
                                 <h1 class="space-words oLight">STRATEGIC ENABLERS</h1>
                             </div>
                             <div class="row mt-5">
-                                <div class="">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
-                                            <div class="">
-                                                <h4 class="oExtraBold">People</h4>
-                                                <h5 class="oRegular">Institute tech training</h5>
-                                                <h6 class="oLight">- Talent – respect doers</h6>
-                                                <h6 class="oLight">- System thinking </h6>
-                                            </div>
-                                            <div class="txt-priority">
-                                                <h4 class="oExtraBold">Priority</h4>
-                                                <h5 class="oRegular">Meet TAKT every cycle</h5>
-                                                <h6 class="oLight">- Safest workplace</h6>
-                                                <h6 class="oLight">- Best quality </h6>
-                                                <h6 class="oLight">- Shortest lead time</h6>
-                                                <h6 class="oLight">- Lowest cost</h6>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
-                                            <div class="text-center txt-strategic-img">
-                                                <img v-bind:src="require('../../../assets/images/strategic-enablers.png')" alt="" class="img-fluid "/>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
-                                            <div class="">
-                                                <h4 class="oExtraBold">Process</h4>
-                                                <h5 class="oRegular">Institute tech training</h5>
-                                                <h6 class="oLight">- E2E material flow</h6>
-                                                <h6 class="oLight">- Design for mfg product variant</h6>
-                                                <h6 class="oLight">- Quality at source</h6>
-                                            </div>
-                                            <div class="txt-pi">
-                                                <h4 class="oExtraBold">PI</h4>
-                                                <h5 class="oRegular">Problem solving and innovation</h5>
-                                                <h6 class="oLight">- Resilient supply chain</h6>
-                                                <h6 class="oLight">- Mfg. of the future</h6>
-                                            </div>
-                                        </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                    <div class="">
+                                        <h4 class="oExtraBold">People</h4>
+                                        <h5 class="oRegular">Institute tech training</h5>
+                                        <h6 class="oLight">- Talent – respect doers</h6>
+                                        <h6 class="oLight">- System thinking </h6>
                                     </div>
-                                        
+                                    <div class="txt-priority">
+                                        <h4 class="oExtraBold">Priority</h4>
+                                        <h5 class="oRegular">Meet TAKT every cycle</h5>
+                                        <h6 class="oLight">- Safest workplace</h6>
+                                        <h6 class="oLight">- Best quality </h6>
+                                        <h6 class="oLight">- Shortest lead time</h6>
+                                        <h6 class="oLight">- Lowest cost</h6>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                    <div class="text-center txt-strategic-img">
+                                        <img v-bind:src="require('../../../assets/images/strategic-enablers.png')" alt="" class="img-fluid "/>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                    <div class="">
+                                        <h4 class="oExtraBold">Process</h4>
+                                        <h5 class="oRegular">Institute tech training</h5>
+                                        <h6 class="oLight">- E2E material flow</h6>
+                                        <h6 class="oLight">- Design for mfg product variant</h6>
+                                        <h6 class="oLight">- Quality at source</h6>
+                                    </div>
+                                    <div class="txt-pi">
+                                        <h4 class="oExtraBold">PI</h4>
+                                        <h5 class="oRegular">Problem solving and innovation</h5>
+                                        <h6 class="oLight">- Resilient supply chain</h6>
+                                        <h6 class="oLight">- Mfg. of the future</h6>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +102,7 @@
                 </div>
             </div>
         </div>
-        <div class="hr-bottom">
+        <div class="hr-bottom pt-5">
             <div class="container">
                 <div class="row">
                     <hr/>
@@ -186,7 +181,7 @@ export default {
         position: relative;
         right: 0;
         width: 100%;
-        min-height: 100vh;
+        min-height: 120vh;
         padding: 100px;
         display: flex;
         justify-content: space-between;
@@ -202,7 +197,7 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         opacity: 0.8;
     }
     .values{
@@ -247,7 +242,7 @@ export default {
         scroll-behavior: smooth;
         z-index: 1000;
         scrollbar-gutter: stable both-edges;
-        width: 400px;
+        width: 350px;
         height: 380px;
     }
     .txt-principles p, h6{
@@ -257,7 +252,8 @@ export default {
         font-size: 25px;
     }
     .txt-strategic{
-        z-index: 100;
+        z-index: 10;
+        right: 0;
     }
     .txt-strategic-img{
         position: absolute;
@@ -304,23 +300,6 @@ export default {
         background: transparent;
         border: none;
     }
-    @media only screen and (min-width: 19000px) and (max-width: 2500px){
-        .showcase-values video{
-            object-fit: cover;
-        }
-        .values-additional-2{
-            display: none;
-        }
-        .values-additional{
-            margin-left: 5rem;
-        }
-        .txt-principles{
-            margin-left: 10rem;
-            margin-top: 13rem;
-        }
-        .txt-additional{
-            margin-top: 10rem;
-        }
-    }
+
 
 </style>
