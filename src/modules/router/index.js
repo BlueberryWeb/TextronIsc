@@ -128,7 +128,7 @@ export default {
         {
             path: '/OS',
             name: 'ISC_OS',
-            component: () => import('@/modules/views/OS/IscOs')
+            component: () => import('@/modules/views/Os/IscOs')
         },
     ]
 

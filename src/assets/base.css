@@ -530,6 +530,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   background: #212121;
   font-family: 'Open Sans Extra Bold';
 }
+
 /* ENDS VIEW LOGIN */
 @media only screen and (min-width: 1600px) and (max-width: 4500px){
   .brands{
@@ -586,13 +587,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   .buttons-modules{
       height: 500px;
   }
-  .info-modules{
-      margin-top: -3rem !important;
-  }
   .txt-info-modules{
       height: 450px;
   }
   .txt-isc{
     top: 3%;
   }
+
 }

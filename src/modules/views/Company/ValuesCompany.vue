@@ -1,4 +1,7 @@
 <template>
+    <MediaQueryProvider>
+
+    </MediaQueryProvider>
     <section class="showcase-values" id="showcase">
         <video v-bind:src="require('../../../assets/video/loop-values.mp4')" muted loop autoplay ></video>    
         <div class="edit">
@@ -140,6 +143,7 @@
 </template>
 
 <script>
+
 export default {
     methods:{
         getMission() {

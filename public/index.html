@@ -23,16 +23,28 @@
   </noscript>
   <div id="app"></div>
   <!-- built files will be auto injected -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
   <script>
     AOS.init();
+    jQuery(document).ready(function() {
+        if (screen.width > 1600) {
+
+            $('#isc').addClass('txt-isc-respon')
+            $('#isc').removeClass('txt-isc')
+        }
+        else{
+
+            $('#isc').removeClass('txt-isc-respon')
+            $('#isc').addClass('txt-isc')
+        }
+    })
   </script>
+  <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-component-media-queries@1.0.0/dist/index.js"></script>
 </body>
 
 </html>

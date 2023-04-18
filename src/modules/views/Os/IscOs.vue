@@ -6,7 +6,7 @@
                 <i class="fa-regular fa-pen-to-square"></i>
             </button>
         </div>     
-        <div class="txt-isc" data-aos="fade-down"  data-aos-duration="1500">
+        <div class="txt-isc" data-aos="fade-down"  data-aos-duration="1500" id="isc">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-2">
@@ -16,7 +16,7 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-10">
                         <div class="text-center">
-                            <h1 class="oExtraBold">Integrated Supply Chain</h1>
+                            <h1 class="oExtraBold" id="texto">Integrated Supply Chain</h1>
                             <h2 class="oRegular h1">Operating System</h2>
                         </div>
                     </div>
@@ -411,8 +411,25 @@
 </template>
 
 <script>
-export default {
 
+    function responsiveView(x){
+        console.log(x)
+        let a = document.getElementById('isc')
+        console.log(a)
+        // divIsc.style.color='red'
+        // if(x.matches){
+        //     divIsc.style.top('3%')
+        // }else{
+        //     divIsc.style.top('10%')
+        //     console.log(divIsc)
+        // }
+    }
+    const respo = window.matchMedia("(min-width: 1600px)")
+
+    responsiveView(respo)
+
+    // respo.addEventListener(responsiveView)
+export default {
 }
 </script>
 
@@ -452,7 +469,7 @@ export default {
     }
     .txt-isc{
         position: absolute;
-        top: 3%;
+        top: 10%;
         left: 0;
         transform: calc(-50%, -50%);
         width: 100%;
@@ -553,5 +570,11 @@ export default {
         background: transparent;
         border: none;
     }
-
+    .txt-isc-respon{
+        position: absolute;
+        top: 3%;
+        left: 0;
+        transform: calc(-50%, -50%);
+        width: 100%;
+    }
 </style>
